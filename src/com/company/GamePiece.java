@@ -73,6 +73,12 @@ class GamePiece {
             this.positionX = positionX;
             this.positionY = positionY;
         }
+        if (this.positionX >= this.minX  && this.positionX <= 100 && this.positionY >= this.minY && this.positionY <= this.maxY) {
+            System.out.println(getPositionX());
+            System.out.println(getPositionY());
+        } else {
+            System.out.println("Sorry, your position was out-of-bounds");
+        }
     }
 
     public void freeze() {
@@ -83,3 +89,4 @@ class GamePiece {
         frozen = false;
     }
 }
+
